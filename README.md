@@ -10,7 +10,7 @@ If you are looking to dig deeper into ZMK and develop new functionality, it is r
 
 ## Resources
 - The [official Glove80 Glove80 Support](https://moergo.com/glove80-support) web site. Glove80 documentation and other technical resources.
-- The [official MoErgo Discord Server](https://moergo.com/discord). Instant conversations with other MoErgo users.
+- The [official MoErgo Discord Server](https://moergo.com/discord). Instant conversations with other Glove80 users.
 
 - The [official ZMK Documentation](https://zmk.dev/docs) web site. Find the answers to many of your questions about ZMK Firmware.
 - The [official ZMK Discord Server](https://discord.gg/8cfMkQksSB). Instant conversations with other ZMK developers and users. Great technical resource!
@@ -24,7 +24,7 @@ If you are looking to dig deeper into ZMK and develop new functionality, it is r
 4. Commit and push your changes to your personal repo. Upon pushing it, GitHub Actions will start building a new version of your firmware with the updated keymap.
 
 ## Firmware Files
-To locate your firmware files...
+To locate your firmware files and reflash your Glove80...
 1. log into GitHub and navigate to your personal config repository you just uploaded your keymap changes to.
 2. Click "Actions" in the main navigation, and in the left navigation click the "Build" link.
 3. Select the desired workflow run in the centre area of the page (based on date and time of the build you wish to use). You can also start a new build from this page by clicking the "Run workflow" button.
