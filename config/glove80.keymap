@@ -157,7 +157,7 @@
        &trans   &trans       &trans     &trans      &trans     &trans                                                  &kp BSLH  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
        &trans   &kp EXCL     &kp AT     &kp LBRC    &kp RBRC   &kp PIPE                                               &kp AMPS   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS   &kp SCROLLLOCK
        &trans   &kp HASH     &kp DLLR   &kp LPAR    &kp RPAR   &kp GRAV                                                          &kp PIPE   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS            &none
-       &trans   &kp PRCNT    &kp CARET  &kp LBKT    &kp RBKT   &kp TILDE &trans  &trans   &to 0  &trans  &trans  &trans              &kp COMMA   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
+       &trans   &kp PRCNT    &kp CARET  &kp LBKT    &kp RBKT   &kp TILDE &trans  &trans   &to 0  &trans  &trans  &trans              &kp BSLH   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
    &magic 2 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &trans  &trans  &trans  &trans  &trans  &trans                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
             >;
         };
