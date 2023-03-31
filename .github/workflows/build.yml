@@ -12,6 +12,13 @@ jobs:
           repository: moergo-sc/zmk
           ref: main
           path: src
+      - name: merge Bluetooth disconnect PR 1638
+        shell: bash
+        run: |
+          cd src
+          git remote add upstream https://github.com/zmkfirmware/zmk.git
+          git fetch upstream pull/1638/head:refs/remotes/upstream/pull/1638
+          git merge -c "Merge PR#1638" refs/remotes/upstream/pull/1638
       - uses: cachix/install-nix-action@v16
         with:
           nix_path: nixpkgs=channel:nixos-22.05
