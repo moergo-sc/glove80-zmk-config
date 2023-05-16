@@ -21,7 +21,7 @@ If you are looking to dig deeper into ZMK and develop new functionality, it is r
  
 ## Instructions
 1. Log into, or sign up for, your personal GitHub account.
-2. Fork this repository to your local computer, and then push it to your GitHub personal account. ([instructions](https://docs.github.com/en/get-started/quickstart/fork-a-repo))
+2. Create your own repository using this repository as a template ([instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template])) and check it out on your local computer.
 3. Edit the keymap file(s) to suit your needs
 4. Commit and push your changes to your personal repo. Upon pushing it, GitHub Actions will start building a new version of your firmware with the updated keymap.
 
