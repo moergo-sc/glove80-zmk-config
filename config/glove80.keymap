@@ -102,10 +102,10 @@
 
     #define _LSHFT_LPAR_    &bhm LSHFT LPAR
     #define _RSHFT_RPAR_    &bhm RSHFT RPAR
-    #define _LALT_LBRC_     &hml LALT LBRC
-    #define _RALT_RBRC_     &hml RALT RBRC
-    #define _LGUI_LBKT_     &hml LGUI LBKT
-    #define _RGUI_RBKT_     &hml RGUI RBKT
+    #define _LALT_LBRC_     &bhm LALT LBRC
+    #define _RALT_RBRC_     &bhm RALT RBRC
+    #define _LGUI_LBKT_     &bhm LGUI LBKT
+    #define _RGUI_RBKT_     &bhm RGUI RBKT
 
 
     #define _MAC_LOCK_      &kp RG(RC(Q))
