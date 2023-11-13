@@ -39,6 +39,15 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
+
+        bhm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     macros {
@@ -87,58 +96,88 @@
         };
     };
 
+    // Custom defiinitions
+    #define _HOME_A_        &bhm LCTRL A
+    #define _HOME_SEMI_     &bhm RCTRL SEMI
+
+    #define _LSHFT_LPAR_    &bhm LSHFT LPAR
+    #define _RSHFT_RPAR_    &bhm RSHFT RPAR
+    #define _LALT_LBRC_     &hml LALT LBRC
+    #define _RALT_RBRC_     &hml RALT RBRC
+    #define _LGUI_LBKT_     &hml LGUI LBKT
+    #define _RGUI_RBKT_     &hml RGUI RBKT
+
+
+    #define _MAC_LOCK_      &kp RG(RC(Q))
+    #define _SCRN_CAP_      &kp RG(RS(N4))
+    #define _ZOOM_IN_       &kp RG(RS(EQUAL))
+    #define _ZOOM_OUT_      &kp RG(MINUS)
+
+    #define _LED_SP_INC_    &rgb_ug RGB_SPI
+    #define _LED_SP_DEC_    &rgb_ug RGB_SPD
+    #define _LED_SA_INC_    &rgb_ug RGB_SAI
+    #define _LED_SA_DEC_    &rgb_ug RGB_SAD
+    #define _LED_HU_INC_    &rgb_ug RGB_HUI
+    #define _LED_HU_DEC_    &rgb_ug RGB_HUD
+    #define _LED_BR_INC_    &rgb_ug RGB_BRI
+    #define _LED_BR_DEC_    &rgb_ug RGB_BRD
+    #define _LED_TOGGLE_    &rgb_ug RGB_TOG
+    #define _LED_CYCLE_     &rgb_ug RGB_EFF
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
-            // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
-            // |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
-            // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
-            // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
-
             bindings = <
-            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                         &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-            &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp TAB        &kp Q    &kp W       &kp E       &kp R       &kp T                                                                      &kp Y   &kp U   &kp I       &kp O       &kp P       &kp BSLH
-            &kp ESC        &kp A    &kp S       &kp D       &kp F       &kp G                                                                      &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
-            &kp GRAVE      &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp RALT  &kp RET   &kp SPACE           &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                                                                                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    &kp F1         &kp F2         &kp F3         &kp F4         &kp F5                                                                                                                                      &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &kp EQUAL      &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                                                                                        &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &kp MINUS
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &kp PLUS       &kp Q          &kp W          &kp E          &kp R          &kp T                                                                                                         &kp Y          &kp U          &kp I          &kp O          &kp P          &kp PIPE
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &kp ESC        _HOME_A_       &kp S          &kp D          &kp F          &kp G                                                                                                         &kp H          &kp J          &kp K          &kp L          _HOME_SEMI_    &kp EQUAL
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ╭──────────────┬──────────────┬──────────────┬┬──────────────┬──────────────┬──────────────╮ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &kp MINUS      &kp Z          &kp X          &kp C          &kp V          &kp B            _LSHFT_LPAR_   _LALT_LBRC_    _LGUI_LBKT_     _RGUI_RBKT_    _RALT_RBRC_    _RSHFT_RPAR_     &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &kp UNDER
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &magic 2 0     &kp HOME       &kp END        &kp LEFT       &kp RIGHT                       &lt 1 SPACE    &kp BSPC       &kp TAB         &kp GRAVE      &kp SQT        &lt 2 ENTER                     &kp UP         &kp DOWN       &kp LBKT       &kp RBKT       &none
+//╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
 
         lower_layer {
             bindings = <
-            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
-            &trans            &none               &none           &none           &none           &kp HOME                                                                              &kp LPAR     &kp KP_NUM   &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp PSCRN
-            &trans            &none               &none           &kp UP          &none           &kp END                                                                               &kp RPAR     &kp KP_N7    &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp SLCK
-            &trans            &none               &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_UP                                                                             &kp PRCNT    &kp KP_N4    &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &none
-            &trans            &kp K_CMENU         &none           &kp F11         &kp F12         &kp PG_DN       &trans      &trans      &to DEFAULT &trans      &trans      &trans    &kp COMMA    &kp KP_N1    &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
-            &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                                                                                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+   &kp C_BRI_DN    &kp C_BRI_UP   &kp C_PREV     &kp C_NEXT     &kp C_PP                                                                                                                                    &kp C_MUTE     &kp C_VOL_DN   &kp C_VOL_UP   &none          &kp PAUSE_BREAK
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &trans         &none          &none          &none          &none          &kp HOME                                                                                                      &kp LPAR       &kp KP_NUM     &kp KP_EQUAL   &kp KP_SLASH   &kp STAR       &kp PRINTSCREEN
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &trans         &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT                                                                                                     &kp CARET      &kp AMPS       &kp STAR       &kp MINUS       &kp PLUS       &kp PIPE
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &trans         &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                                                                                                        &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &trans
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ╭──────────────┬──────────────┬──────────────┬┬──────────────┬──────────────┬──────────────╮ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &trans         &kp ESC        &kp PLUS       &kp MINUS      &kp EQUAL      &kp UNDER        &trans         &trans         &trans          &trans         &trans         &trans           &kp LBKT       &kp RBKT       &kp EQUAL      &kp DOT        &kp BSLH       &kp TILDE
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &magic 2 0     &kp CAPS       &kp INS        &kp F11        &kp F12                         &trans         &trans         &trans          &trans         &trans         &trans                          &none          &none          &none          &none          &none
+//╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
 
         magic_layer {
             bindings = <
-            &bt BT_CLR        &none               &none           &none           &none                                                                                                           &none      &none      &none      &none      &bt BT_CLR_ALL
-            &none             &none               &none           &none           &none           &none                                                                                &none      &none      &none      &none      &none      &none
-            &none             &rgb_ug RGB_SPI     &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                                      &none      &none      &none      &none      &none      &none
-            &bootloader       &rgb_ug RGB_SPD     &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                                      &none      &none      &none      &none      &none      &bootloader
-            &sys_reset        &none               &none           &none           &none           &none           &bt_2     &bt_3     &none            &none     &none     &none       &none      &none      &none      &none      &none      &sys_reset
-            &none             &none               &none           &none           &none                           &bt_0     &bt_1     &out OUT_USB     &none     &none     &none                  &none      &none      &none      &none      &to FACTORY_TEST
-            >;
-        };
-
-        factory_test_layer {
-            bindings = <
-            &kp N0   &kp N6   &kp N2   &kp N8   &kp N4                                                                              &kp N4   &kp N8   &kp N2   &kp N6   &kp N0
-            &kp N1   &kp N7   &kp N3   &kp N9   &kp N5   &kp N0                                                            &kp N0   &kp N5   &kp N9   &kp N3   &kp N7   &kp N1
-            &kp N2   &kp N8   &kp N4   &kp N0   &kp N6   &kp N1                                                            &kp N1   &kp N6   &kp N0   &kp N4   &kp N8   &kp N2
-            &kp N3   &kp N9   &kp N5   &kp N1   &kp N7   &kp N2                                                            &kp N2   &kp N7   &kp N1   &kp N5   &kp N9   &kp N3
-            &kp N4   &kp N0   &kp N6   &kp N2   &kp N8   &kp N3   &kp N4   &kp N5   &kp N6      &kp N6   &kp N5   &kp N4   &kp N3   &kp N8   &kp N2   &kp N6   &kp N0   &kp N4
-            &kp N5   &kp N1   &kp N7   &kp N3   &kp N9            &kp N7   &kp N8   &kp N9      &kp N9   &kp N8   &kp N7            &kp N9   &kp N3   &kp N7   &kp N1   &kp N5
+//╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮                                                                                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+    &none          &none          &none          &none          &none                                                                                                                                       &none          &out OUT_USB   &out OUT_BLE   &bt BT_CLR     &bt BT_CLR_ALL
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &none          _LED_SP_INC_   _LED_SA_INC_   _LED_HU_INC_   _LED_BR_INC_   _LED_TOGGLE_                                                                                                  &none          &none          &none          &none          &none          &none 
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &none          _LED_SP_DEC_   _LED_SA_DEC_   _LED_HU_DEC_   _LED_BR_DEC_   _LED_CYCLE_                                                                                                   &none          &none          &none          &none          &none          &none 
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &trans         &kp C_PREV     &kp C_NEXT     &kp C_VOL_DN   &kp C_VOL_UP   &kp C_PP                                                                                                       &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT      _ZOOM_IN_      _SCRN_CAP_
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ╭──────────────┬──────────────┬──────────────┬┬──────────────┬──────────────┬──────────────╮ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &trans         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans         &trans         &trans          &trans         &trans         &trans           &trans         &trans         &trans         &trans         _ZOOM_OUT_     _MAC_LOCK_
+//├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
+    &sys_reset     &bootloader    &trans         &trans         &trans                          &trans         &trans         &trans          &trans         &trans         &trans                          &trans         &trans         &none          &bootloader    &sys_reset
+//╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
     };
