@@ -126,7 +126,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_HOLD_TAP_LEFT";
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             #binding-cells = <2>;
@@ -140,7 +140,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_HOLD_TAP_RIGHT";
             flavor = "balanced";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             #binding-cells = <2>;
