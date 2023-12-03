@@ -114,14 +114,6 @@
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-        magic: magic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&rgb_ug_status_macro>;
-        };
 
         hml: hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
@@ -163,6 +155,17 @@
 
             hold-trigger-on-release;
         };    
+
+
+
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <LAYER_LOWER LAYER_RAISE>;
+            then-layer = <LAYER_TRI>;
+        };
     };
 
     macros {
@@ -244,17 +247,6 @@
     #define _LED_CYCLE_     &rgb_ug RGB_EFF
 
     #define _STATUS_        &rgb_ug_status_macro
-
-
-    { \
-        conditional_layers { \
-            compatible = "zmk,conditional-layers"; \
-            tri_layer { \
-                if-layers = <LAYER_LOWER LAYER_RAISE>; \
-                then-layer = <LAYER_TRI>; \
-            }; \
-        }; \
-    };
 
     keymap {
         compatible = "zmk,keymap";
