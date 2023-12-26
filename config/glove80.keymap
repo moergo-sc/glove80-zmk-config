@@ -109,6 +109,9 @@
 #define THUMBS POS_RH_T1 POS_RH_T2 POS_RH_T3 POS_RH_T4 POS_RH_T5 POS_RH_T6 POS_LH_T1 POS_LH_T2 POS_LH_T3 POS_LH_T4 POS_LH_T5 POS_LH_T6
 
 
+#define TAP_TERM_MS             180
+#define QUICK_TAP_MS            125
+#define REQUIRE_PRIOR_IDLE_MS   125
 
 / {
     behaviors {
@@ -119,9 +122,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_HOLD_TAP_LEFT";
             flavor = "balanced";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <TAP_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
@@ -133,9 +136,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRM_HOLD_TAP_RIGHT";
             flavor = "balanced";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <TAP_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
