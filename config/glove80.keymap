@@ -110,8 +110,8 @@
 
 
 #define TAP_TERM_MS             180
-#define QUICK_TAP_MS            125
-#define REQUIRE_PRIOR_IDLE_MS   125
+#define QUICK_TAP_MS            140
+#define REQUIRE_PRIOR_IDLE_MS   140
 
 / {
     behaviors {
