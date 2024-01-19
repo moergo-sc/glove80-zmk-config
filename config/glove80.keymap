@@ -217,21 +217,21 @@
     };
 
     // QWERTY Custom defiinitions
-    #define _HOME_A_        &qt LCTRL A
-    #define _HOME_S_        &hml LALT S
-    #define _HOME_D_        &hml LGUI D
-    #define _HOME_K_        &hmr LGUI K
-    #define _HOME_L_        &hmr LALT L
-    #define _HOME_SEMI_     &qt LCTRL SEMI
+    #define _QHOME_A_        &qt LCTRL A
+    #define _QHOME_S_        &hml LALT S
+    #define _QHOME_D_        &hml LGUI D
+    #define _QHOME_K_        &hmr LGUI K
+    #define _QHOME_L_        &hmr LALT L
+    #define _QHOME_SEMI_     &qt LCTRL SEMI
 
 
     // Colemak DH definitions
-    #define _HOME_A_        &qt LCTRL A
-    #define _HOME_R_        &hml LALT R
-    #define _HOME_S_        &hml LGUI S
-    #define _HOME_E_        &hmr LGUI E
-    #define _HOME_I_        &hmr LALT I
-    #define _HOME_O_        &qt LCTRL O
+    #define _CHOME_A_        &qt LCTRL A
+    #define _CHOME_R_        &hml LALT R
+    #define _CHOME_S_        &hml LGUI S
+    #define _CHOME_E_        &hmr LGUI E
+    #define _CHOME_I_        &hmr LALT I
+    #define _CHOME_O_        &qt LCTRL O
 
 
     #define _LSHFT_LPAR_    &hml LSHFT LPAR
@@ -243,7 +243,7 @@
 
 
     #define _LAYER_LOWER_   &lt LAYER_LOWER SPACE
-    #define _LAYER_UPPER_   &lt LAYER_UPPER ENTER
+    #define _LAYER_RAISE_   &lt LAYER_RAISE ENTER
 
     #define _MAC_LOCK_      &kp RG(RC(Q))
     #define _SCRN_CAP_      &kp RG(RS(N4))
@@ -275,11 +275,11 @@
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     &kp GRAVE      &kp Q          &kp W          &kp E          &kp R          &kp T                                                                                                         &kp Y          &kp U          &kp I          &kp O          &kp P          &kp PIPE
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    &kp ESC        _HOME_A_       _HOME_S_       _HOME_D_       &kp F          &kp G                                                                                                         &kp H          &kp J          _HOME_K_       _HOME_L_       _HOME_SEMI_    &kp SQT
+    &kp ESC        _QHOME_A_      _QHOME_S_      _QHOME_D_      &kp F          &kp G                                                                                                         &kp H          &kp J          _QHOME_K_      _QHOME_L_      _QHOME_SEMI_   &kp SQT
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ╭──────────────┬──────────────┬──────────────┬┬──────────────┬──────────────┬──────────────╮ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     &kp MINUS      &kp Z          &kp X          &kp C          &kp V          &kp B            &kp LPAR       &kp LBRC       &kp LBKT        &kp RBKT       &kp RBRC       &kp RPAR         &kp N          &kp M          &kp COMMA      &kp DOT        &kp FSLH       &kp UNDER
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    _STATUS_       &none          &none          &none          &none                           _LAYER_LOWER_  &kp LSHFT      &kp TAB         &kp BSPC       &kp RSHFT      _LAYER_UPPER_                   &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      _STATUS_
+    _STATUS_       &none          &none          &none          &none                           _LAYER_LOWER_  &kp LSHFT      &kp TAB         &kp BSPC       &kp RSHFT      _LAYER_RAISE_                   &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      _STATUS_
 //╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴┴──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────┴──────────────┴──────────────┴──────────────╯
             >;
         };
@@ -293,7 +293,7 @@
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     &trans         &kp Q          &kp W          &kp F          &kp P          &kp B                                                                                                         &kp J          &kp L          &kp U          &kp Y          &kp SEMI       &trans
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                                                                                              ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-    &trans         _HOME_A_       _HOME_R_       _HOME_S_       &kp T          &kp G                                                                                                         &kp M          &kp N          _HOME_E_       _HOME_I_       _HOME_O_       &trans
+    &trans         _CHOME_A_      _CHOME_R_      _CHOME_S_      &kp T          &kp G                                                                                                         &kp M          &kp N          _CHOME_E_      _CHOME_I_      _CHOME_O_      &trans
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ╭──────────────┬──────────────┬──────────────┬┬──────────────┬──────────────┬──────────────╮ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
     &trans         &kp Z          &kp X          &kp C          &kp D          &kp V            &trans         &trans         &trans          &trans         &trans         &trans           &kp K          &kp H          &trans         &trans         &trans         &trans
 //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
