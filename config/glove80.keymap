@@ -18,7 +18,7 @@
 #define LOWER 1
 #define MAGIC 2
 #define FACTORY_TEST 3
-
+#define OS_SFT &sk LSHIFT
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -97,15 +97,15 @@
             // |  TAB  |  V  |  M  |  L   |  C   |  P   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
             // |  ESC  |  S  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
             // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
-            // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
+            // | MAGIC | HOME| END | LEFT | RIGHT|      | SPACE  | DEL   | LALT  | | RALT  | RET   |OS_SFT |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp Q          &kp X    &kp W       &kp M       &kp G       &kp J                                                                      &kp BSLH   &kp DOT &kp FSLH    &kp EQUAL   &kp SQT     &kp BSLH
-            &kp Z          &kp S    &kp C       &kp N       &kp T       &kp K                                                                      &kp COMMA  &kp A   &kp E       &kp I       &kp H       &kp Z
-            &kp GRAVE      &kp B    &kp P       &kp L       &kp D       &kp V   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &kp MINUS  &kp U   &kp O       &kp Y       &kp F       &kp PG_UP
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp R       &kp BSPC    &kp DEL    &kp RALT  &kp RET   &kp SPACE              &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &kp Q          &kp V    &kp M       &kp L       &kp C       &kp P                                                                      &kp B      &kp DOT &kp U       &kp O       &kp Q       &kp BSLH
+            &kp Z          &kp S    &kp T       &kp R       &kp D       &kp Y                                                                      &kp F      &kp N   &kp E       &kp A       &kp I       &kp MINUS
+            &kp GRAVE      &kp X    &kp K       &kp J       &kp G       &kp W   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp Z      &kp H   &kp COMMA   &kp DOT     &kp SEMI    &kp PG_UP
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp R       &kp BSPC    &kp DEL    &kp RALT  &kp RET   OS_SFT                 &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
