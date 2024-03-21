@@ -12,6 +12,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 
+#include "fride_behaviors.dtsi"
+#include "fride_macros.dtsi"
+
 #define HYPER LC(LS(LG(LALT)))
 
 // layers
