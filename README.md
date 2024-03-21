@@ -35,3 +35,13 @@ To locate your firmware files and reflash your Glove80...
 6. Flash the firmware to Glove80 according to the user documentation on the official Glove80 Glove80 Support website (linked above)
 
 Your keyboard is now ready to use.
+
+```
+bindings = <
+            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
+            &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
+            &kp Q          &kp X    &kp W       &kp M       &kp G       &kp J                                                                      &kp BSLH   &kp DOT &kp FSLH    &kp EQUAL   &kp SQT     &kp BSLH
+            &kp Z          &kp S    &kp C       &kp N       &kp T       &kp K                                                                      &kp COMMA  &kp A   &kp E       &kp I       &kp H       &kp Z
+            &kp GRAVE      &kp B    &kp P       &kp L       &kp D       &kp V   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &kp MINUS  &kp U   &kp O       &kp Y       &kp F       &kp PG_UP
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp R       &kp BSPC    &kp DEL    &kp RALT  &kp RET   &kp SPACE              &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+```
