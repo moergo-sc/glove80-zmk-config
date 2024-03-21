@@ -21,15 +21,7 @@
 #define FACTORY_TEST 3
 #define l_akE 4
 
-/ {
-    behaviors {
-        
-    };
-
-    macros {
-        
-    };
-
+/ {    
     keymap {
         compatible = "zmk,keymap";
 
