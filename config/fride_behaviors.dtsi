@@ -32,17 +32,21 @@ behaviors {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow_mods";
             #binding-cells = <2>;
-            tapping-term-ms = <my_tapping_term>;
-            flavor = "balanced";
+            tapping-term-ms = <270>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;             // delay positional check until key-release
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; // left hand allowed
    };
    hml: homerow_mods_left { // use on left hand to mod right
             compatible = "zmk,behavior-hold-tap";
             label = "homerow_mods";
             #binding-cells = <2>;
-            tapping-term-ms = <my_tapping_term>;
-            flavor = "balanced";
+            tapping-term-ms = <270>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+             hold-trigger-on-release;             // delay positional check until key-release
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // right hand allowed
    };
