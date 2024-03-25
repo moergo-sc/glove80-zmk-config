@@ -26,15 +26,16 @@
 #define l_akE 9
 #define l_akU 10
 
-#define HM_N &hmr RSFT &kp N
-#define HM_E &hmr RGUI &ak_u
+#define HM_T &hml LSFT &kp T
+#define HM_N &hml LGUI &kp N
+#define HM_C &hml LALT &kp C
+#define HM_S &hml LCLT &kp S
 
-#define HM_A &hrm_a RALT A
+#define HM_A &hmr RSFT &kp A
+#define HM_E &hmr RGUI &kp E
+#define HM_I &hmr LALT &kp I
+#define HM_H &hmr RCLT &kp H
 
-#define HM_D &hrm_d LSFT D
-#define HM_R &hrm_r LGUI R
-#define HM_T &hrm_t LALT T
-#define HM_S &hrm_s LCTL S
 
 #include "fride_config.h"
 
@@ -58,10 +59,10 @@
             bindings = <
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp Q          &kp V    &kp M       &kp L       &kp C       &kp P                                                                      &kp B      &kp Q   &ak_u       &kp O       &kp Q       &kp BSLH
-            &kp Z          HM_S     HM_T        HM_R        HM_D        &kp Y                                                                      &kp F      &kp N   HM_E        HM_A        &kp I       &kp MINUS
-            &kp GRAVE      &kp X    &kp K       &kp J       &kp G       &kp W   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp Z      &kp H   &kp COMMA   &kp DOT     &kp SEMI    &kp PG_UP
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp SPACE   &kp BSPC    &kp DEL    &kp RALT  &kp RET   &sk LSHIFT             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &kp Q          &kp X    &kp W       &kp M       &kp G       &kp J                                                                      &kp BSLH   &kp DOT &kp SLASH   &kp EQUAL   &kp QMARK    &kp BSLH
+            &kp Z          HM_S     HM_C        HM_N        HM_T        &kp K                                                                      &kp COMMA  HM_A    HM_E        HM_I        HM_H        &kp MINUS
+            &kp GRAVE      &kp B    &kp P       &kp L       &kp G       &kp V   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp MINUS  &kp U   &kp O       &kp Y       &kp F       &kp PG_UP
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp R       &kp BSPC    &kp DEL    &kp RALT  &kp RET   &pk SPACE             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
