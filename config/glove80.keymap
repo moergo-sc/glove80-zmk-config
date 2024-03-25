@@ -18,8 +18,9 @@
 #define LOWER 1
 #define MAGIC 2
 #define FACTORY_TEST 3
-#define l_akE 4
-#define l_akU 5
+#define l_akD 4
+#define l_akE 5
+#define l_akU 6
 
 
 #define HM_E &hmr RGUI &ak_u
