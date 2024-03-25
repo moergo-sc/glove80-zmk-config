@@ -11,9 +11,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-
-#include "fride_behaviors.dtsi"
 #include "fride_macros.dtsi"
+#include "fride_behaviors.dtsi"
 
 #define HYPER LC(LS(LG(LALT)))
 

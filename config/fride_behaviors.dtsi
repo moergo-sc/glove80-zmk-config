@@ -1,4 +1,3 @@
-
 behaviors {
     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
     // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
