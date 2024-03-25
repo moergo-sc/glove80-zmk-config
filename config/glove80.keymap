@@ -23,7 +23,7 @@
 
 
 #define HM_E &hmr RGUI &ak_u
-
+#include "fride_config.h"
 / {    
 
     #include "fride_macros.dtsi"
