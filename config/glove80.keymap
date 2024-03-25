@@ -22,9 +22,11 @@
 #define l_akE 5
 #define l_akU 6
 
-
+#define HM_N &hmr RSFT &kp N
 #define HM_E &hmr RGUI &ak_u
 #define HM_D &hml LSFT &ak_d
+#define HM_A &hmr RALT &ak_a
+#define HM_R &hml LGUI &kp R
 
 #include "fride_config.h"
 
@@ -49,7 +51,7 @@
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp Q          &kp V    &kp M       &kp L       &kp C       &kp P                                                                      &kp B      &kp DOT &ak_u       &kp O       &kp Q       &kp BSLH
-            &kp Z          &kp S    &kp T       &kp R       HM_D        &kp Y                                                                      &kp F      &kp N   HM_E        &kp A       &kp I       &kp MINUS
+            &kp Z          &kp S    &kp T       &kp R       HM_D        &kp Y                                                                      &kp F      &kp N   HM_E        HM_A        &kp I       &kp MINUS
             &kp GRAVE      &kp X    &kp K       &kp J       &kp G       &kp W   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp Z      &kp H   &kp COMMA   &kp DOT     &kp SEMI    &kp PG_UP
             &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp SPACE   &kp BSPC    &kp DEL    &kp RALT  &kp RET   &sk LSHIFT             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
