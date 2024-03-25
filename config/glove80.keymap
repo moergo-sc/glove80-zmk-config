@@ -18,9 +18,10 @@
 #define LOWER 1
 #define MAGIC 2
 #define FACTORY_TEST 3
-#define l_akD 4
-#define l_akE 5
-#define l_akU 6
+#define l_akA 4
+#define l_akD 5
+#define l_akE 6
+#define l_akU 7
 
 #define HM_N &hmr RSFT &kp N
 #define HM_E &hmr RGUI &ak_u
@@ -50,7 +51,7 @@
             bindings = <
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp Q          &kp V    &kp M       &kp L       &kp C       &kp P                                                                      &kp B      &kp DOT &ak_u       &kp O       &kp Q       &kp BSLH
+            &kp Q          &kp V    &kp M       &kp L       &kp C       &kp P                                                                      &kp B      &kp Q   &ak_u       &kp O       &kp Q       &kp BSLH
             &kp Z          &kp S    &kp T       &kp R       HM_D        &kp Y                                                                      &kp F      &kp N   HM_E        HM_A        &kp I       &kp MINUS
             &kp GRAVE      &kp X    &kp K       &kp J       &kp G       &kp W   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp Z      &kp H   &kp COMMA   &kp DOT     &kp SEMI    &kp PG_UP
             &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp SPACE   &kp BSPC    &kp DEL    &kp RALT  &kp RET   &sk LSHIFT             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
@@ -91,6 +92,16 @@
         };
 
         // adaptive layers
+        l_akA {
+            bindings = <
+            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
+            &trans            &trans              &trans          &trans          &trans          &kp HOME                                                                              &trans       &trans       &trans       &trans        &trans          &trans
+            &trans            &trans              &trans          &trans          &trans          &trans                                                                                &trans       &kp O        &trans       &trans        &trans          &trans
+            &trans            &trans              &trans          &trans          &trans          &trans                                                                                &trans       &trans       &trans       &trans        &trans          &trans
+            &trans            &trans              &trans          &trans          &trans          &trans          &trans      &trans      &to DEFAULT &trans      &trans      &trans    &trans       &trans       &trans       &trans        &trans          &trans
+            &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
+            >;
+        };
         l_akD {
             bindings = <
             &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
