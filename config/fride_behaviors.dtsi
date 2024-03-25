@@ -17,4 +17,31 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
     };
+    hm: homerow_mods { // use on either hand
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow_mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <my_tapping_term>;
+            quick-tap-ms = <my_quick_tapping_term>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+   };
+   hmr: homerow_mods_right { // use on right hand to mod left
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow_mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <my_tapping_term>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>; // left hand allowed
+   };
+   hml: homerow_mods_left { // use on left hand to mod right
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow_mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <my_tapping_term>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>; // right hand allowed
+   };
 };
