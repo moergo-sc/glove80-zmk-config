@@ -15,26 +15,27 @@
 
 // layers
 #define DEFAULT 0
-#define LOWER 1
-#define MAGIC 2
-#define FACTORY_TEST 3
-#define l_akA 4
-#define l_akD 5
-#define l_akR 6
-#define l_akS 7
-#define l_akT 8
-#define l_akE 9
-#define l_akU 10
+#define l_nav 1
+#define LOWER 2
+#define MAGIC 3
+#define FACTORY_TEST 4
+#define l_akA 5
+#define l_akD 6
+#define l_akR 7
+#define l_akS 8
+#define l_akT 9
+#define l_akE 10
+#define l_akU 11
 
-#define HM_T &hml LSFT &kp T
-#define HM_N &hml LGUI &kp N
-#define HM_C &hml LALT &kp C
-#define HM_S &hml LCLT &kp S
+#define HM_T &hml LSHFT T
+#define HM_N &hml LGUI N
+#define HM_C &hml LALT C
+#define HM_S &hml LCTRL S
 
-#define HM_A &hmr RSFT &kp A
-#define HM_E &hmr RGUI &kp E
-#define HM_I &hmr LALT &kp I
-#define HM_H &hmr RCLT &kp H
+#define HM_A &hmr RSHFT A
+#define HM_E &hmr RGUI E
+#define HM_I &hmr LALT I
+#define HM_H &hmr RCTRL H
 
 
 #include "fride_config.h"
@@ -59,13 +60,23 @@
             bindings = <
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp Q          &kp X    &kp W       &kp M       &kp G       &kp J                                                                      &kp BSLH   &kp DOT &kp SLASH   &kp EQUAL   &kp QMARK    &kp BSLH
+            &kp Q          &kp X    &kp W       &kp M       &kp G       &kp J                                                                      &kp BSLH   &kp DOT &kp SLASH   &kp EQUAL   &kp QMARK   &kp BSLH
             &kp Z          HM_S     HM_C        HM_N        HM_T        &kp K                                                                      &kp COMMA  HM_A    HM_E        HM_I        HM_H        &kp MINUS
-            &kp GRAVE      &kp B    &kp P       &kp L       &kp G       &kp V   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp MINUS  &kp U   &kp O       &kp Y       &kp F       &kp PG_UP
-            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp R       &kp BSPC    &kp DEL    &kp RALT  &kp RET   &pk SPACE             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &kp GRAVE      &kp B    &kp P       &kp L       &kp D       &kp V   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp MINUS  &kp U   &kp O       &kp Y       &kp F       &kp PG_UP
+            &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           &lt l_nav R       &kp BSPC    &kp DEL    &kp RALT  &kp RET   &kp SPACE             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
+        l_nav {
+            bindings = <
+            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &trans           &kp PAUSE_BREAK
+            &trans            &trans              &trans          &trans          &trans          &kp HOME                                                                              &kp LPAR     &kp KP_NUM   &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp PSCRN
+            &trans            &trans              &none           &kp UP          &none           &kp END                                                                               &kp RPAR     &kp KP_N7    &kp BSPC     &kp UP        &kp DEL    &kp SLCK
+            &trans            &none               &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_UP                                                                             &kp PRCNT    &kp KP_N4    &kp LEFT     &kp DOWN      &kp RIGHT    &none
+            &trans            &kp K_CMENU         &none           &kp F11         &kp F12         &kp PG_DN       &trans      &trans      &to DEFAULT &trans      &trans      &trans    &kp COMMA    &kp KP_N1    &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
+            &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
+            >;
+        };
         lower_layer {
             bindings = <
             &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &trans           &kp PAUSE_BREAK
