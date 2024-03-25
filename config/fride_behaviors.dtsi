@@ -49,7 +49,7 @@ behaviors {
 
    hrm_d: hrm_d {
             compatible = "zmk,behavior-hold-tap";
-            label = "hrm_a";
+            label = "hrm_d";
             #binding-cells = <2>;
             tapping-term-ms = <my_tapping_term>;
             flavor = "balanced";
