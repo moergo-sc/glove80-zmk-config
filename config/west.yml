@@ -1,0 +1,16 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: dhruvinsh
+      url-base: https://github.com/dhruvinsh
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-tri-state
+      remote: dhruvinsh
+      revision: main
+  self:
+    path: config

@@ -27,16 +27,15 @@
 #define l_akE 10
 #define l_akU 11
 
-#define HM_D &hml LSHFT D
-#define HM_R &hml LGUI R
-#define HM_C &hml LALT C
-#define HM_S &hml LCTRL S
+#define HM_S &hml LALT S
+#define HM_N &hml LCTRL N
+#define HM_T &hml LGUI T
+#define HM_C &hml LSHFT C
 
-#define HM_A &hmr RSHFT A
+#define HM_H &hmr RSHFT H
 #define HM_E &hmr RGUI E
+#define HM_A &hmr RCTRL A
 #define HM_I &hmr LALT I
-#define HM_H &hmr RCTRL H
-
 
 #define NAV_SPCAE &lt l_nav SPACE
 
@@ -68,8 +67,8 @@
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
             &kp Q          &kp F    &kp R       &kp D       &kp P       &kp V                                                                      &kp Q      &kp M   &kp U       &kp O       &kp Y       &kp BSLH
-            &kp Z          &kp S    &kp N       &kp T       &kp C       &kp B                                                                      &kp DOT    &kp H   &kp E       &kp A       &kp I       &kp MINUS
-            &kp GRAVE      &kp Z    &kp X       &kp K       &kp W       &kp W   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp SQT     &kp J      &kp L   &kp SEMI    &kp SQT     &kp COMMA   &kp PG_UP
+            &kp TAB        HM_S     HM_N        HM_T        HM_C        &kp B                                                                      &kp DOT    HM_H    HM_E        HM_A        HM_I        &kp MINUS
+            &kp GRAVE      &kp Z    &kp X       &kp K       &kp G       &kp W   &sk HYPER   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &swap       &kp J      &kp L   &kp SEMI    &kp SQT     &kp COMMA   &kp PG_UP
             &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           NAV_SPCAE   &kp BSPC    &kp DEL    &kp RALT  &kp RET   &sk LSHIFT             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };

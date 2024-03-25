@@ -101,4 +101,12 @@ behaviors {
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; // left hand allowed
    };
    
+        swap: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <1>;
+        };
+
 };

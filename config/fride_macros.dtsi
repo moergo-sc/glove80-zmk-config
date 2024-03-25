@@ -96,4 +96,5 @@
         bindings = <&macro_tap &kp T>
                  , <&sl l_akT>;
     )
+
  };
