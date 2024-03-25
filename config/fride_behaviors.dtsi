@@ -17,6 +17,8 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
     };
+
+    
     hm: homerow_mods { // use on either hand
             compatible = "zmk,behavior-hold-tap";
             label = "homerow_mods";
@@ -33,7 +35,7 @@ behaviors {
             tapping-term-ms = <my_tapping_term>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMBS>; // left hand allowed
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; // left hand allowed
    };
    hml: homerow_mods_left { // use on left hand to mod right
             compatible = "zmk,behavior-hold-tap";
@@ -42,6 +44,6 @@ behaviors {
             tapping-term-ms = <my_tapping_term>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMBS>; // right hand allowed
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // right hand allowed
    };
 };
