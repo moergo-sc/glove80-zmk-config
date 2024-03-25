@@ -24,7 +24,7 @@
 
     #include "fride_macros.dtsi"
     #include "fride_behaviors.dtsi"
-    
+
     keymap {
         compatible = "zmk,keymap";
 

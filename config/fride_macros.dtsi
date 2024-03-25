@@ -43,6 +43,7 @@
                   <&bt BT_SEL 3>;
         };
 
+/*
     ZMK_MACRO(AppSwitch,
         wait-ms = <50>;
         tap-ms = <20>;
@@ -56,6 +57,7 @@
                   , <&macro_release &kp RGUI>  // release the previous hold
                   ;
     )
+*/    
     ZMK_MACRO(Qu,
         wait-ms = <10>;
         tap-ms = <10>;
