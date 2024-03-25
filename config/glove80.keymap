@@ -25,8 +25,8 @@
 
 #define HM_N &hmr RSFT &kp N
 #define HM_E &hmr RGUI &ak_u
-#define HM_D &hrm_d LSFT &ak_d
-#define HM_A &hrm_a RALT &ak_a
+#define HM_D &hrm_d LSFT D
+#define HM_A &hrm_a RALT A
 #define HM_R &hml LGUI &kp R
 
 #include "fride_config.h"
