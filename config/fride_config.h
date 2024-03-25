@@ -2,6 +2,21 @@
 #define my_quick_tapping_term 112
 #define my_ak_delay 40
 
+// layers
+#define DEFAULT 0
+#define l_nav 1
+#define LOWER 2
+#define MAGIC 3
+#define FACTORY_TEST 4
+#define l_akA 12
+#define l_akD 11
+#define l_akR 10
+#define l_akS 9
+#define l_akT 8
+#define l_akE 7
+#define l_akU 6
+#define l_akO 13
+
   //
     // Glove80 key positions index for positional hold-tap
     // - https://discord.com/channels/877392805654306816/937645688244826154/1066713913351221248
