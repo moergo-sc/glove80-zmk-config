@@ -47,6 +47,8 @@ behaviors {
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // right hand allowed
    };
 
+   // left homerow     
+
    hrm_d: hrm_d {
             compatible = "zmk,behavior-hold-tap";
             label = "hrm_d";
@@ -56,7 +58,35 @@ behaviors {
             bindings = <&kp>, <&ak_d>;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // left hand allowed
    };
+   hrm_r: hrm_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "hrm_r";
+            #binding-cells = <2>;
+            tapping-term-ms = <my_tapping_term>;
+            flavor = "balanced";
+            bindings = <&kp>, <&ak_r>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // left hand allowed
+   };
+   hrm_t: hrm_t {
+            compatible = "zmk,behavior-hold-tap";
+            label = "hrm_t";
+            #binding-cells = <2>;
+            tapping-term-ms = <my_tapping_term>;
+            flavor = "balanced";
+            bindings = <&kp>, <&ak_t>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // left hand allowed
+   };
+   hrm_s: hrm_s {
+            compatible = "zmk,behavior-hold-tap";
+            label = "hrm_s";
+            #binding-cells = <2>;
+            tapping-term-ms = <my_tapping_term>;
+            flavor = "balanced";
+            bindings = <&kp>, <&ak_s>;
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // left hand allowed
+   };
 
+        // right homwroe
    hrm_a: hrm_a {
             compatible = "zmk,behavior-hold-tap";
             label = "hrm_a";
@@ -66,4 +96,5 @@ behaviors {
             bindings = <&kp>, <&ak_a>;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; // left hand allowed
    };
+   
 };
