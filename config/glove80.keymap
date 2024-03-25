@@ -23,6 +23,8 @@
 
 
 #define HM_E &hmr RGUI &ak_u
+#define HM_D &hml LSFT &ak_d
+
 #include "fride_config.h"
 
 / {    
@@ -86,6 +88,16 @@
         };
 
         // adaptive layers
+        l_akD {
+            bindings = <
+            &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
+            &trans            &trans              &trans          &trans          &trans          &kp HOME                                                                              &trans       &trans       &trans       &trans        &trans          &trans
+            &trans            &trans              &trans          &trans          &trans          &trans                                                                                &trans       &kp Y        &trans       &trans        &trans          &trans
+            &trans            &trans              &trans          &trans          &trans          &trans                                                                                &trans       &trans       &trans       &trans        &trans          &trans
+            &trans            &trans              &trans          &trans          &trans          &trans          &trans      &trans      &to DEFAULT &trans      &trans      &trans    &trans       &trans       &trans       &trans        &trans          &trans
+            &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
+            >;
+        };
         l_akE {
             bindings = <
             &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &none           &kp PAUSE_BREAK
