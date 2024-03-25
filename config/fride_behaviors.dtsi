@@ -17,4 +17,4 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
     };
-}
+};
