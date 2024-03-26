@@ -95,8 +95,6 @@
                 ;
     )
 
-
-
     mod_tab: mod_tab_switcher {
         compatible = "zmk,behavior-macro-one-param";
         wait-ms = <0>;

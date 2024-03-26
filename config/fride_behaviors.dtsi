@@ -44,7 +44,7 @@ behaviors {
     };
     hrm_r: hrm_r {
         compatible = "zmk,behavior-hold-tap";
-        label = "hrm_d";
+        label = "hrm_r";
         #binding-cells = <2>;
         bindings = <&kp>, <&ak_r>;
         flavor = "balanced";

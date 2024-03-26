@@ -31,12 +31,12 @@
         compatible = "zmk,keymap";
         default_layer {
                bindings = <
-                &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-                &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-                &kp Q          &kp V    &ak_m       &ak_l       &ak_c       &ak_p                                                                      &kp B      &kp Q   &ak_u       &ak_o       &kp Q       &kp BSLH
-                &kp Z          &ak_s    HOME_T      HOME_R      HOME_D     &ak_y                                                                       &kp F      HOME_N  HOME_E      HOME_A      &ak_i       &kp MINUS
-                &kp GRAVE      &kp X    &ak_k       &ak_j       &ak_g       &kp W   &kp LSHFT   &kp LCTRL   &kp L      &kp LGUI  &kp RCTRL &kp SQT     &kp Z      &kp H   &kp COMMA   &kp DOT     &kp SEMI    &kp PG_UP
-                &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           NAV_SPCAE   &kp BSPC    &kp DEL    &kp RALT  &kp RET   &sk LSHIFT             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+                &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6    &kp F7      &kp F8      &kp F9      &kp F10
+                &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7    &kp N8      &kp N9      &kp N0      &kp MINUS
+                &kp Q          &kp V    &ak_m       &ak_l       &ak_c       &ak_p                                                                      &kp B      &kp Q     &ak_u       &ak_o       &kp Q       &kp BSLH
+                &kp Z          &ak_s    HOME_T      HOME_R      HOME_D      &ak_y                                                                      &kp F      HOME_N    HOME_E      HOME_A      &ak_i       &kp MINUS
+                &kp GRAVE      &kp X    &ak_k       &ak_j       &ak_g       &kp W   &kp LSHFT   &kp LCTRL   &kp L      &kp LGUI  &kp RCTRL &AppSwap    &kp Z      &kp H     &kp COMMA   &kp DOT     &kp SEMI    &kp PG_UP
+                &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           NAV_SPCAE   &sl l_num  &kp DEL     &kp RALT  &kp RET   &sk LSHIFT             &kp LPAR  &kp LBKT    &kp LBKT    &kp RBKT    &magic MAGIC 0
             >;
         };
 
@@ -45,9 +45,19 @@
                 &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &trans          &kp PAUSE_BREAK
                 &trans            &trans              &trans          &trans          &trans          &kp HOME                                                                              &kp LPAR     &kp KP_NUM   &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp PSCRN
                 &trans            &trans              &none           &kp UP          &none           &kp END                                                                               &kp RPAR     &kp BSPC     &kp UP        &kp DEL      &kp SLCK        &none
-                &trans            &sk LALT            &sk LCTRL       &sk LGUI        &sk LSHIFT       &kp PG_UP                                                                             &kp PRCNT    &kp LEFT     &kp DOWN     &kp RIGHT     &kp RIGHT       &none
+                &trans            &sk LSHIFT          &sk LCTRL       &sk LALT        &sk LGUI       &kp PG_UP                                                                             &kp PRCNT    &kp LEFT     &kp DOWN     &kp RIGHT     &kp RIGHT       &none
                 &trans            &kp K_CMENU         &none           &kp F11         &kp F12         &kp PG_DN       &AppSwap      &trans      &to DEFAULT &trans      &trans      &trans    &kp COMMA    &kp KP_N1    &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &trans
                 &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &trans      &trans      &trans                 &kp KP_N0    &kp KP_N0    &kp KP_DOT    &kp KP_ENTER    &trans
+            >;
+        };
+        l_num {
+            bindings = <
+                &kp C_BRI_DN      &kp C_BRI_UP        &kp C_PREV      &kp C_NEXT      &kp C_PP                                                                                                           &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP  &trans             &kp PAUSE_BREAK
+                &trans            &trans              &trans          &trans          &trans          &kp HOME                                                                              &kp LPAR     &kp KP_NUM   &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY    &kp PSCRN
+                &trans            &trans              &none           &kp UP          &none           &kp END                                                                               &kp PERCENT  &kp N7       &kp N8        &kp N9      &kp COLON          &kp K
+                &trans            &sk LSHIFT          &sk LCTRL       &sk LALT        &sk LGUI        &kp PG_UP                                                                             &kp PLUS     &kp N4       &kp N5        &kp N6      &kp MINUS          &kp J
+                &trans            &kp K_CMENU         &none           &kp F11         &kp F12         &kp PG_DN       &AppSwap    &trans      &to DEFAULT &kp LT      &kp GT      &kp EQUAL &kp STAR     &kp N1       &kp N2        &kp N3      &kp SLASH          &kp G
+                &trans            &kp CAPS            &kp INS         &kp F11         &kp F12                         &trans      &trans      &trans      &kp COMMA   &kp DOT     &kp N0                 &trans       &trans       &trans       &trans             &trans
             >;
         };
 
