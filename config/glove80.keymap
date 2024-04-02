@@ -30,23 +30,51 @@ ZMK_BEHAVIOR(ss_cw, tap_dance,
     bindings = <&sk LSHFT>, <&caps_word>;
 )
 
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_BEHAVIOR(NAME, mod_morph, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+// tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
+SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+
+// tap: dot | shift + tap: colon | ctrl + shift + tap: >
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
+SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+
+// tap: qmark | shift + tap: excl
+SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
+
+// tap: left/right parenthesis | shft + tap: less-than/greater-than
+SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
+SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
+
 / {    
 
     #include "fride_macros.dtsi"
     #include "fride_behaviors.dtsi"
     #include "fride_combos.dtsi"
+ /*
 
+   Q W F P B    J L U Y ;
+   A R S T G    M N E I O
+   Z X C D V    K H , . /
+
+*/
     keymap {
         compatible = "zmk,keymap";
         default_layer {
                bindings = <
-                &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                            &kp F6    &kp F7      &kp F8      &kp F9      &kp F10
-                &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6     &kp N7    &kp N8      &kp N9      &kp N0      &kp MINUS
-                &kp Q          &kp V    &ak_m       &ak_l       &ak_c       &ak_p                                                                      &kp B      &sl l_uc  &ak_u       &ak_o       &kp Q       &kp BSLH
-                &kp Z          &ak_s    HOME_T      HOME_R      HOME_D      &ak_y                                                                      &kp F      HOME_N    HOME_E      HOME_A      &ak_i       &kp MINUS
-                &kp GRAVE      &kp X    &ak_k       &ak_j       &ak_g       &kp W   &kp LSHFT   &kp LCTRL   &kp L      &kp LGUI  &kp RCTRL &AppSwap    &kp Z      &kp H     &kp COMMA   &kp DOT     &kp SEMI    &kp PG_UP
-                &magic MAGIC 0 &kp HOME &kp END     &kp LEFT    &kp RIGHT           NAV_SPCAE   &sl l_num  &kp DEL     &kp RALT  &kp RET   &ss_cw                 &kp LPAR  &kp LBKT    &kp LBKT    &kp RBKT    &magic MAGIC 0
-            >;
+                &kp F1         &kp F2         &kp F3       &kp F4       &kp F5                                                                                                 &kp F6        &kp F7        &kp F8       &kp F9      &kp F10
+                &kp EQUAL      &kp N1         &kp N2       &kp N3       &kp N4       &kp N5                                                                         &kp N6     &kp N7        &kp N8        &kp N9       &kp N0      &kp MINUS
+                &kp Q          &kp Q          &kp W        &kp F        &kp P        &kp B                                                                          &kp J      &kp L         &kp U         &kp Y        &kp SQT     &kp Q
+                &kp EQUAL      &hml LCTRL A   &hml LALT R  &hml LGUI S  &hml LSFT T  &kp G                                                                          &kp M      &hmr RSFT N   &hmr RGUI E   &hmr LALT I  &hmr RCTL O &kp Z
+                &kp GRAVE      &kp Z          &kp X        &kp C        &kp D        &kp V      &kp LSHFT    &kp LCTRL   &kp L      &kp LGUI  &kp LCTRL &AppSwap    &kp K      &kp H         &comma_morph  &dot_morph   &qexcl      &kp PG_UP
+                &magic MAGIC 0 &kp PIPE       &kp BSLH     &kp PIPE     &kp SLASH               NAV_SPCAE    &sl l_num  &kp DEL     &kp RALT  &kp RET   &skq LSHIFT            &kp LPAR      &kp LBKT      &kp RBKT     &kp LPAR    &magic MAGIC 0
+            >;        
         };
 
         l_nav {
