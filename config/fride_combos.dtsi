@@ -31,4 +31,5 @@ combos {
 
     COMBO_ANY(TAB,   &kp TAB, 36 37 38)
     COMBO_ANY(ENTER, &kp ENTER, 41 42 43)
+    COMBO_ANY(SEMI,  &kp ENTER, 60 61)
 };
