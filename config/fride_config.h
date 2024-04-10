@@ -26,6 +26,7 @@
 #define MAGIC_E   16
 #define MAGIC_P   17
 #define MAGIC_F   18
+#define l_uc      19
 
 
 //
