@@ -21,7 +21,7 @@ behaviors {
     // Home Row Mods
     hmr: homerow_mods_right { // use on right hand to mod left
         compatible = "zmk,behavior-hold-tap";
-        label = "homerow_mods";
+        label = "homerow_mods-right";
         #binding-cells = <2>;
         tapping-term-ms = <my_tapping_term>;
         flavor = "balanced";
@@ -31,85 +31,11 @@ behaviors {
 
     hml: homerow_mods_left { // use on left hand to mod right
         compatible = "zmk,behavior-hold-tap";
-        label = "homerow_mods";
+        label = "homerow_mods-left";
         #binding-cells = <2>;
         tapping-term-ms = <my_tapping_term>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // right hand allowed
-    };
-
-    hrm_d: hrm_d {
-        compatible = "zmk,behavior-hold-tap";
-        label = "hrm_d";
-        #binding-cells = <2>;
-        bindings = <&kp>, <&ak_d>;
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
-        require-prior-idle-ms = <150>;        
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // right hand allowed
-        hold-trigger-on-release;             // delay positional check until key-release
-    };
-    hrm_r: hrm_r {
-        compatible = "zmk,behavior-hold-tap";
-        label = "hrm_r";
-        #binding-cells = <2>;
-        bindings = <&kp>, <&ak_r>;
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
-        require-prior-idle-ms = <150>;        
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // right hand allowed
-        hold-trigger-on-release;             // delay positional check until key-release
-    };
-    hrm_t: hrm_t {
-        compatible = "zmk,behavior-hold-tap";
-        label = "hrm_t";
-        #binding-cells = <2>;
-        bindings = <&kp>, <&ak_t>;
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
-        require-prior-idle-ms = <150>;        
-        hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>; // right hand allowed
-        hold-trigger-on-release;             // delay positional check until key-release
-    };
-
-     hrm_n: hrm_n {
-        compatible = "zmk,behavior-hold-tap";
-        label = "hrm_n";
-        #binding-cells = <2>;
-        bindings = <&kp>, <&ak_n>;
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
-        require-prior-idle-ms = <150>;        
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; // right hand allowed
-        hold-trigger-on-release;             // delay positional check until key-release
-    };
-     hrm_e: hrm_e {
-        compatible = "zmk,behavior-hold-tap";
-        label = "hrm_e";
-        #binding-cells = <2>;
-        bindings = <&kp>, <&ak_e>;
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
-        require-prior-idle-ms = <150>;        
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; // right hand allowed
-        hold-trigger-on-release;             // delay positional check until key-release
-    };
-     hrm_a: hrm_a {
-        compatible = "zmk,behavior-hold-tap";
-        label = "hrm_a";
-        #binding-cells = <2>;
-        bindings = <&kp>, <&ak_a>;
-        flavor = "balanced";
-        tapping-term-ms = <280>;
-        quick-tap-ms = <175>;                // repeat on tap-into-hold
-        require-prior-idle-ms = <150>;        
-        hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>; // right hand allowed
-        hold-trigger-on-release;             // delay positional check until key-release
     };
 };

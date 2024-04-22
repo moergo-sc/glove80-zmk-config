@@ -20,14 +20,7 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 #include "../zmk-nodefree-config/international_chars/greek.dtsi"
-
-#define HOME_D &hrm_d LGUI  D 
-#define HOME_R &hrm_r LALT  R
-#define HOME_T &hrm_t LCTRL T
-
-#define HOME_N &hrm_n RGUI  N
-#define HOME_E &hrm_e RALT  E
-#define HOME_A &hrm_a RCTRL A
+#include "../zmk-nodefree-config/keypos_def/keypos_glv80.h"
 
 ZMK_BEHAVIOR(ss_cw, tap_dance,
     tapping-term-ms = <200>;
@@ -77,7 +70,7 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
                 &kp Q          &kp Q          &kp W        &kp F        &kp P        &kp B                                                                          &kp J      &kp L         &kp U         &kp Y        &kp SQT     &kp Q
                 &kp EQUAL      &hml LCTRL A   &hml LALT R  &hml LGUI S  &hml LSFT T  &kp G                                                                          &kp M      &hmr RSFT N   &hmr RGUI E   &hmr LALT I  &hmr RCTL O &kp Z
                 &kp GRAVE      &kp Z          &kp X        &kp C        &kp D        &kp V      &kp LSHFT    &kp LCTRL   &kp L      &kp LGUI  &kp LCTRL &AppSwap    &kp K      &kp H         &comma_morph  &dot_morph   &qexcl      &kp PG_UP
-                &magic MAGIC 0 &kp PIPE       &kp BSLH     &kp PIPE     &kp SLASH               NAV_SPCAE    &sl l_num  &kp DEL     &kp RALT  &kp RET   &skq LSHIFT            &kp LPAR      &kp LBKT      &kp RBKT     &kp LPAR    &magic MAGIC 0
+                &magic MAGIC 0 &kp PIPE       &kp BSLH     &kp PIPE     &kp SLASH               NAV_SPCAE    &sl l_num  &kp DEL     &kp RALT  &kp RET   &ss_cw                 &kp LPAR      &kp LBKT      &kp RBKT     &kp LPAR    &magic MAGIC 0
             >;        
         };
 
