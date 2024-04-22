@@ -11,6 +11,10 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define HOST_OS 2
+#define QUICK_TAP_MS 175
+
+#include "../zmk-nodefree-config/helper.h"
 #include "fride_config.h"
 
 #include "../zmk-nodefree-config/helper.h"
@@ -76,6 +80,7 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
                 &magic MAGIC 0 &kp PIPE       &kp BSLH     &kp PIPE     &kp SLASH               NAV_SPCAE    &sl l_num  &kp DEL     &kp RALT  &kp RET   &skq LSHIFT            &kp LPAR      &kp LBKT      &kp RBKT     &kp LPAR    &magic MAGIC 0
             >;        
         };
+
 
         l_nav {
             bindings = <
