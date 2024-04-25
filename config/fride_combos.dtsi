@@ -24,14 +24,47 @@
              │ 52  53  54 │ 55  56  57 │                         │ LH5 LH4 LH3│ RH3 RH4 RH5│
              │ 69  70  71 │ 72  73  74 │                         │ LH2 LH1 LH0│ RH0 RH1 RH2│
              ╰────────────┴────────────╯                         ╰────────────┴────────────╯
- */
+
+
+  ╭─────────────────────╮ ╭─────────────────────╮
+  │ LT4 LT3 LT2 LT1 LT0 │ │ RT0 RT1 RT2 RT3 RT4 │
+  │ LM4 LM3 LM2 LM1 LM0 │ │ RM0 RM1 RM2 RM3 RM4 │
+  │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │
+  ╰───────╮ LH2 LH1 LH0 │ │ RH0 RH1 RH2 ╭───────╯
+          ╰─────────────╯ ╰─────────────╯ */
 combos {
     compatible = "zmk,combos";
 
-    COMBO_ANY(TAB,   &kp TAB, 36 37 38)
-    COMBO_ANY(ENTER, &kp ENTER, 41 42 43)
-    COMBO_ANY(SEMI,  &kp ENTER, 60 61)
-    COMBO_ANY(UC,    &sl l_uc,  48 49)
-    COMBO_ANY(UC_S,  &sl l_uc,  48 50)
-  
+    COMBO_ANY(TAB,      &kp TAB,      36 37 38)
+    COMBO_ANY(ENTER,    &kp ENTER,    41 42 43)
+    COMBO_ANY(SEMI,     &kp ENTER,    60 61)
+    COMBO_ANY(UC,       &sl l_uc,     48 49)
+    COMBO_ANY(UC_S,     &sl l_uc,     48 50)
+
+    COMBO_ANY(at,       &kp AT,       LT3 LM3)
+    COMBO_ANY(hash,     &kp HASH,     LT2 LM2)
+    COMBO_ANY(dollar,   &kp DOLLAR,   LT1 LM1)
+    COMBO_ANY(percent,  &kp PERCENT,  LT0 LM0)
+
+    COMBO_ANY(carret,   &kp CARET,    RT0 RM0)
+    COMBO_ANY(plus  ,   &kp PLUS  ,   RT1 RM1)
+    COMBO_ANY(star  ,   &kp STAR  ,   RT2 RM2)
+    COMBO_ANY(amps  ,   &kp AMPS  ,   RT3 RM3)
+    
+    COMBO_ANY(grave,       &kp GRAVE,        LM3 LB3)
+    COMBO_ANY(BACKSLASH,   &kp BACKSLASH ,   LM2 LB2)
+    COMBO_ANY(equal ,      &kp EQUAL  ,      LM1 LB1)
+    COMBO_ANY(tilde  ,      &kp TILDE  ,     LM0 LB0)
+
+    COMBO_ANY(under,    &kp UNDER,    RM0 RB0)
+    COMBO_ANY(minus  ,  &kp MINUS ,   RM1 RB1)
+    COMBO_ANY(slash ,   &kp SLASH ,   RM2 RB2)
+    COMBO_ANY(pipe  ,   &kp PIPE  ,   RM3 RB3)
+
+    COMBO_ANY(LPAR,     &kp LPAR,     RT1 RT2)
+    COMBO_ANY(RPAR,     &kp RPAR,     RT2 RT3)
+    COMBO_ANY(LBKT,     &kp LBKT,     RM1 RM2)
+    COMBO_ANY(RBKT,     &kp RBKT,     RM2 RM3)
+    COMBO_ANY(LBRC,     &kp LBRC,     RB1 RB2)
+    COMBO_ANY(RBRC,     &kp RBRC,     RB2 RB3)
 };
