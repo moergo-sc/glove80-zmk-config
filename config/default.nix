@@ -1,7 +1,8 @@
-{ pkgs ?  import <nixpkgs> {} }:
+{ pkgs ?  import <nixpkgs> {}
+, firmware ? import ../src {}
+}:
 
 let
-  firmware = import ../src {};
   config = ./.;
 
   glove80_left  = firmware.zmk.override { board = "glove80_lh"; keymap = "${config}/glove80.keymap"; kconfig = "${config}/glove80.conf"; };
