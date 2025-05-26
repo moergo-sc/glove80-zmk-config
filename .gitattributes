@@ -1,1 +1,5 @@
 *.keymap linguist-language=C
+
+# Normalise line endings for Dockerfile and shell scripts
+*.sh text eol=lf
+Dockerfile text eol=lf
